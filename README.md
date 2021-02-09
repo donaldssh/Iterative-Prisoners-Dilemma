@@ -11,35 +11,15 @@ In the literature it can be found exposed in different interpretations, and we a
 
 <img src="bags.png">
 
-In this project we will use the following basic linear algebra framework in order to obtain the players' rewards. Given the payoff matrix $M$, that quantifies the revenue that each player gets depending on whether he cooperates or not, the $i$ player reward can be computed as:
+In this project we will use the following basic linear algebra framework in order to obtain the players' rewards. Given the payoff matrix ![M](https://latex.codecogs.com/svg.latex?%5Cinline%20M), that quantifies the revenue that each player gets depending on whether he cooperates or not, the ![i](https://latex.codecogs.com/svg.latex?%5Cinline%20i) player reward can be computed as:
 
-$$.
-r_i = u_i^T M u_{-i}
-$$
+![](https://latex.codecogs.com/svg.latex?r_i%20%3D%20u_i%5ET%20M%20u_%7B-i%7D)
 
 where:
-\begin{gather*}
-    M = 
-        \begin{pmatrix}
-            2 & 0\\
-            3 & 1
-        \end{pmatrix}\\\\
-    u_{i} =  \text{i-th player move} \\
-    u_{-i} =  \text{adversary's move} \\\\
-    u_x = 
-        \begin{cases}
-            \begin{pmatrix}
-                1 & 0
-            \end{pmatrix}^\intercal \quad \text{when player $x$ collaborates}
-        \\\\
-            \begin{pmatrix}
-                0 & 1
-            \end{pmatrix}^\intercal \quad \text{when player $x$ defects}
-        \end{cases}
-\end{gather*}
+
+![](https://latex.codecogs.com/gif.latex?M%20%3D%20%5Cbegin%7Bpmatrix%7D%202%20%26%200%5C%5C%203%20%26%201%20%5Cend%7Bpmatrix%7D%5C%5C%5C%5C%20u_%7Bi%7D%20%3D%20%5Ctext%7Bi-th%20player%20move%7D%20%5C%5C%20u_%7B-i%7D%20%3D%20%5Ctext%7Badversary%27s%20move%7D%20%5C%5C%5C%5C%20u_x%20%3D%20%5Cbegin%7Bcases%7D%20%5Cbegin%7Bpmatrix%7D%201%20%26%200%20%5Cend%7Bpmatrix%7D%5E%5Cintercal%20%5Cquad%20%5Ctext%7Bwhen%20player%20%24x%24%20collaborates%7D%20%5C%5C%5C%5C%20%5Cbegin%7Bpmatrix%7D%200%20%26%201%20%5Cend%7Bpmatrix%7D%5E%5Cintercal%20%5Cquad%20%5Ctext%7Bwhen%20player%20%24x%24%20defects%7D%20%5Cend%7Bcases%7D)
 
 <br>
-
 
 It is obvious that for both players the winning strategy is to not cooperate. In fact defecting is the strincly dominant strategy and this leads to the result that the expected game outcome will be that both players decide to defect, and this outcome will be a Nash Equilibrium.
 
